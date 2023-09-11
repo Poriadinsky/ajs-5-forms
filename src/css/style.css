@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 70px 20px;
+  position: relative;
+}
+
+.input {
+  width: 190px;
+  height: 30px;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(185, 2, 2);
+  border: 1px solid rgb(185, 2, 2);
+  color: white;
+  font-size: 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  
+  z-index: 999;
+  
+  background: white;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
+}
+
+.tooltip-title {
+  background-color: rgb(199, 196, 196);
+  padding: 5px;
+}
+
+.tooltip-message {
+  padding: 5px;
+}
+
+.tooltip::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: transparent;
+  border-top-color: white;
+  z-index: 1000;
+  bottom: -16px;
+  left: 82px;
+  position: absolute;
+  box-sizing: border-box;  
+}
+
+.tooltip::before {
+  content: "";
+  width: 14px;
+  height: 2px;  
+  z-index: 1001;
+  bottom: -1px;
+  left: 83px;
+  position: absolute;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
